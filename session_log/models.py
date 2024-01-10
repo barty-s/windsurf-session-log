@@ -18,7 +18,7 @@ class Session(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     created_on = models.DateTimeField(auto_now_add=True)
     details = models.TextField(null=False, blank=False)
-    time_loggged = models.IntegerField(choices=TIME_LOGGED_CHOICES, default=1)
+    time_logged = models.IntegerField(choices=TIME_LOGGED_CHOICES, default=1)
     wind_conditions = models.IntegerField(choices=WIND_CHOICES, default=1)
     rating = models.IntegerField(choices=RATING_CHOICES, default=1)
 
