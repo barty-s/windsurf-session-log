@@ -1,3 +1,8 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render 
 
 
+def index(request):
+    """
+    Render the index.html template
+    """
+    return render(request, "index.html")
