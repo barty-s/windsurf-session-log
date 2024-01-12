@@ -1,9 +1,8 @@
-from django.shortcuts import render 
+from django.shortcuts import render
 from django.views import generic
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Session
-from django.contrib.auth.decorators import login_required
 
 
 def index(request):
@@ -13,12 +12,17 @@ def index(request):
     return render(request, "index.html")
 
 
-@login_required
-def my_sessions(request):
+class SessionList(generic.ListView):
     """
-    Render the my_sessions.html template with user's logged training sessions
+    Render the users list of logged sessions
     """
-    user = request.user
-    user_sessions = Session.objects.filter(author=user)
+    template_name = 'my_sessions.html'
+    model = Session
+    queryset = Session.objects.order_by("-created_on")
+    paginate_by = 5
 
-    return render(request, "my_sessions.html", {"user_session":user_sessions},)
+    def get_queryset(self):
+        """
+        Retrieve the signed in user's logged sessions
+        """
+        return Session.objects.filter(author=self.request.user)  
