@@ -21,6 +21,7 @@ class Session(models.Model):
     time_logged = models.IntegerField(choices=TIME_LOGGED_CHOICES, default=1)
     wind_conditions = models.IntegerField(choices=WIND_CHOICES, default=1)
     rating = models.IntegerField(choices=RATING_CHOICES, default=1)
+    date = models.DateField()
 
 
     class Meta:
