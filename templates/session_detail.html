@@ -1,0 +1,47 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+
+<div class="masthead">
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-md-6 masthead-text">
+                <h1 class="session-title">{{ session.title|upper }}</h1>
+                <!-- Post author goes before the | the post's created date goes after -->
+                <p class="post-subtitle">{{ session.date }} | How I felt on the water: {{ session.rating }}/5</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col card mb-4  mt-3 left  top">
+            <div class="card-body">
+                <p class="card-text ">
+                    {{ session.details | safe }}
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 card mb-4  mt-3 ">
+            <span>Hours on the water: {{ session.time_logged }}</span><span>Wind Conditions: {{ session.wind_conditions|upper }}</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <a href="{% url 'my_sessions' %}" class="btn btn-dark">Back</a>
+        </div>
+        <div class="col">
+            <a href="#" class="btn btn-primary">Edit</a><a href="#" class="btn btn-danger">Delete</a>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
