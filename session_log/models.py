@@ -28,7 +28,7 @@ class Session(models.Model):
         """
         Set the order of sessions by most recent session logged
         """
-        ordering = ["-created_on"]
+        ordering = ["-date"]
 
 
     def save(self, *args, **kwargs):

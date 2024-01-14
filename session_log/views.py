@@ -1,8 +1,11 @@
 from django.shortcuts import render, get_object_or_404
-from django.views import generic, View
 from django.urls import reverse_lazy
+from django.views import generic, View
+from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.utils.text import slugify
 from .models import Session
+from .forms import SessionForm
 
 
 def index(request):
@@ -14,7 +17,7 @@ def index(request):
 
 class SessionList(generic.ListView):
     """
-    Render the users list of logged sessions
+    Render the user's list of logged sessions
     """
     template_name = 'my_sessions.html'
     model = Session
@@ -29,7 +32,9 @@ class SessionList(generic.ListView):
 
 
 class SessionDetail(View):
-
+    """
+    Render the session details after the user clicks on one from the list
+    """
     def get(self, request, slug, *args, **kwargs):
         queryset = Session.objects
         session = get_object_or_404(queryset, slug=slug)
@@ -54,3 +59,24 @@ class SessionDetail(View):
                 "post": session,
             },
         )
+   
+
+class CreateSession(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
+    """
+    View for creating a new blog post
+    """
+    template_name = "create_session.html"
+    model = Session
+    form_class = SessionForm
+    success_message = "Your session has been logged"
+    success_url = reverse_lazy("my_sessions")
+
+    def form_valid(self, form):
+        """
+        Custom logic to handle form validation when creating a new blog post
+        """
+        form.instance.author_id = self.request.user.pk
+        form.instance.slug = slugify(form.instance.title)
+        return super(CreateSession, self).form_valid(form)
+    
+    
