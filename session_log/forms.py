@@ -1,5 +1,8 @@
 from django import forms
 from .models import Session
+from datetime import date
+
+today = date.today()
 
 
 class SessionForm(forms.ModelForm):
@@ -27,7 +30,6 @@ class SessionForm(forms.ModelForm):
                 attrs={'class': 'form-control', 'rows': 5}
             ),
             "date": forms.DateInput(
-                attrs={"class": "form-control", "type": "date"}
+                attrs={"class": "form-control", "type": "date", "max":today}
             )
         }
-        

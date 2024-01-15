@@ -12,7 +12,7 @@ class Session(models.Model):
     """
     Database model for a training session
     """
-    title = models.CharField(max_length=200, unique=True, null=False, blank=False)
+    title = models.CharField(max_length=100, unique=True, null=False, blank=False)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="session_logs")
     updated_on = models.DateTimeField(auto_now=True)
