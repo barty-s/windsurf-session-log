@@ -31,7 +31,7 @@
                     <a href="{% url 'update_session' session.slug  %}" class="btn btn-primary">Edit</a>
                     </td>
                     <td>
-                    <a href="#" class="btn btn-danger">Delete</a>
+                    <a href="{% url 'delete_session' session.slug %}" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
             </tbody>

@@ -8,4 +8,5 @@ urlpatterns = [
     path("createsession/", views.CreateSession.as_view(), name="create_session"),
     path("<slug:slug>/", views.SessionDetail.as_view(), name="session_detail"),
     path("update_session/<slug:slug>", views.UpdateSession.as_view(), name="update_session"),
+    path("delete_session/<slug:slug>/delete", views.DeleteSession.as_view(), name="delete_session"),
 ]

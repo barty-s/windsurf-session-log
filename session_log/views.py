@@ -98,4 +98,18 @@ class UpdateSession(
         session = self.get_object()
         return self.request.user == session.author
 
-    
+
+class DeleteSession(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
+    """
+    View to delete a session
+    """
+    model = Session
+    template_name = "delete_session.html"
+    success_url = reverse_lazy("my_sessions")
+
+    def test_func(self):
+        """
+        Check if the current user is the author of the post being deleted
+        """
+        session = self.get_object()
+        return self.request.user == session.author
