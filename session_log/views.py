@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
 from django.views import generic, View
 from django.contrib.messages.views import SuccessMessageMixin
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.utils.text import slugify
 from .models import Session
 from .forms import SessionForm
@@ -78,5 +78,24 @@ class CreateSession(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView)
         form.instance.author_id = self.request.user.pk
         form.instance.slug = slugify(form.instance.title)
         return super(CreateSession, self).form_valid(form)
-    
+
+
+class UpdateSession(
+    LoginRequiredMixin, SuccessMessageMixin, UserPassesTestMixin, generic.UpdateView):
+    """
+    View for updating a logged session
+    """
+    model = Session
+    template_name = "update_session.html"
+    form_class = SessionForm
+    success_message = "Session updated successfully"
+    success_url = reverse_lazy("my_sessions")
+
+    def test_func(self):
+        """
+        Check if the current user is the author of the post being updated
+        """
+        session = self.get_object()
+        return self.request.user == session.author
+
     
