@@ -76,7 +76,6 @@ class CreateSession(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView)
         Custom logic to handle form validation when creating a new blog post
         """
         form.instance.author_id = self.request.user.pk
-        form.instance.slug = slugify(form.instance.title)
         return super(CreateSession, self).form_valid(form)
 
 
