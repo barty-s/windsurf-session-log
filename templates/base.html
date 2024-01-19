@@ -1,9 +1,11 @@
 {% load static %}
 
+{% load active_link_tags %}
+
 <!DOCTYPE html>
-<html class="h-100">
+<html>
   <head>
-    <title>Windsurfer Session Log</title>
+    <title>Windsurfer - Training Session Log</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -33,10 +35,9 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
 
-  <body class="d-flex flex-column h-100 main-bg">
+  <body>
     <!-- Navigation -->
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'index' %}"
           ><span class="brand">Windsurfer</span></a
@@ -56,7 +57,7 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a
-                class="nav-link active"
+                class="nav-link {% active_link 'index' %}"
                 aria-current="page"
                 href="{% url 'index' %}"
                 >Home</a
@@ -64,17 +65,33 @@
             </li>
             {% if user.is_authenticated %}
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'my_sessions' %}">My Sessions</a>
+              <a
+                class="nav-link {% active_link 'my_sessions' %}"
+                href="{% url 'my_sessions' %}"
+                >My Sessions</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'account_logout' %}">Sign Out</a>
+              <a
+                class="nav-link {% active_link 'account_logout' %}"
+                href="{% url 'account_logout' %}"
+                >Sign Out</a
+              >
             </li>
             {% else %}
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a>
+              <a
+                class="nav-link {% active_link 'account_signup' %}"
+                href="{% url 'account_signup' %}"
+                >Sign Up</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'account_login' %}">Sign In</a>
+              <a
+                class="nav-link {% active_link 'account_login' %}"
+                href="{% url 'account_login' %}"
+                >Sign In</a
+              >
             </li>
             {% endif %}
           </ul>
@@ -82,31 +99,55 @@
       </div>
     </nav>
 
-    <main class="flex-shrink-0 main-bg">
+    <main class="flex-shrink-0">
       {% block content %}
       <!-- Content Goes here -->
       {% endblock content %}
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-auto py-3 dark-bg">
+    <footer class="footer py-3">
       <div class="container">
-          <div class="row">
-            <div class="col">
-              <p class="m-0 text-center">Follow us on our socials</p>
-              <p class="m-0 text-center">
-                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook ms-3"></i></a>
-                <a href="https://twitter.com/?lang=en" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter ms-3"></i></a>
-                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram ms-3"></i></a>
-              </p>
-            </div>
-            <div class="col">
-              <p class="m-0 text-center">Coded by Sarah Barter</p>
-              <p class="m-0 text-center">
-                <a href="https://github.com/barty-s" target="_blank" rel="noopener noreferrer"><i class="fab fa-github ms-3"></i></a>
-                <a href="https://www.linkedin.com/in/sarah-barter-6383b196/" target="_blank"><i class="fab fa-linkedin ms-3"></i></a>
-              </p>
-            </div>
+        <div class="row">
+          <div class="col-md-6">
+            <p class="m-0 text-center">Follow us on our socials</p>
+            <p class="m-0 text-center">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-facebook ms-3"></i
+              ></a>
+              <a
+                href="https://twitter.com/?lang=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-twitter ms-3"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-instagram ms-3"></i
+              ></a>
+            </p>
+          </div>
+          <div class="col-md-6">
+            <p class="m-0 text-center">Coded by Sarah Barter</p>
+            <p class="m-0 text-center">
+              <a
+                href="https://github.com/barty-s"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-github ms-3"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/sarah-barter-6383b196/"
+                target="_blank"
+                ><i class="fab fa-linkedin ms-3"></i
+              ></a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

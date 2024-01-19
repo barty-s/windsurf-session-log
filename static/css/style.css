@@ -1,0 +1,64 @@
+/* Styling for base.html */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav,
+footer {
+  background-color: #014759;
+  color: #fff;
+}
+
+a,
+a:visited {
+  color: #fff;
+}
+
+.brand {
+  font-size: 27px;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.fab {
+  transition: all 0.2s ease-in-out;
+}
+
+.fab:hover {
+  transform: scale(1.1);
+}
+
+/* Styling for index.html */
+h1,
+h2 {
+  color: #014759;
+}
+
+.btn-sign-up {
+  background-color: #014759;
+  color: #fff;
+  border: 2px solid #014759;
+}
+
+.btn-sign-up:hover {
+  color: #014759;
+  background-color: #fff;
+}
+
+/* Styling for sign up/in pages */
+p .sign-in-link {
+  color: #014759;
+}
+
+.welcome {
+  color: #4b7a6e;
+}
+
+/* Styling for My Sessions page */
+td .session-link {
+  color: #4b7a6e;
+}

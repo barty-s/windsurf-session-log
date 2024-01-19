@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-<!-- home page - user sees before they sign up/sign in  -->
+<!-- site home page - user sees before sign up/sign in  -->
 {% block content %}
 <!-- Header-->
 <header class="py-5 header-bg-img">
@@ -14,7 +14,7 @@
                     
                     <h1 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline">Keep track of your training sessions</span></h1>
                     <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
-                        <a class="btn btn-primary rounded-pill btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder"
+                        <a class="btn btn-sign-up rounded-pill btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder"
                             href="{% url 'account_signup' %}">Log a Session</a>
                     </div>
                 </div>
