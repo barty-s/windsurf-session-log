@@ -34,7 +34,8 @@ footer {
 
 /* Styling for index.html */
 h1,
-h2 {
+h2,
+h5 {
   color: #014759;
 }
 
@@ -61,4 +62,10 @@ p .sign-in-link {
 /* Styling for My Sessions page */
 td .session-link {
   color: #4b7a6e;
+}
+
+/* Styling for Session Detail page */
+.session-detail {
+  border: 2px solid #014759;
+  border-radius: 4px;
 }

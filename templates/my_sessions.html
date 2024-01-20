@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<div class="row reservation-container">
+<div class="row session-container">
     <div class="col-10 col-md-8 text-center reservations-table m-3 mx-auto">
         <div class="form-style table-responsive">
             <h1 class="mt-3 mb-3">{{ request.user.username|title }}'s Sessions</h1>
@@ -15,8 +15,6 @@
                     <th>Date</th>
                     <th>Title</th>
                     <th>Rating</th>
-                    <th><span class="sr-only">Edit Button Column</span></th>
-                    <th><span class="sr-only">Delete Button Column</span></th>
                 </tr>
             </thead>
             {% if user.is_authenticated %}
@@ -24,14 +22,8 @@
             <tbody>
                 <tr>
                     <td>{{ session.date }}</td>
-                    <td><a href="{% url 'session_detail' session.slug  %}" class="session-link">{{ session.title }}</a></td>
+                    <td><a href="{% url 'session_detail' session.slug  %}" class="session-link">{{ session.title|title }}</a></td>
                     <td>{{ session.rating }}</td>
-                    <td>
-                    <a href="{% url 'update_session' session.slug  %}" class="btn btn-primary">Edit</a>
-                    </td>
-                    <td>
-                    <a href="{% url 'delete_session' session.slug %}" class="btn btn-danger">Delete</a>
-                    </td>
                 </tr>
             </tbody>
             {% empty %}
@@ -63,7 +55,7 @@
             {% endif %}
             </span>
         </div>
-        <div class="create-btn">
+        <div class="create-btn mt-5">
             <a href="{% url 'create_session' %}" class="btn btn-success">Log a Session</a>
         </div>
     </div>
