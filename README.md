@@ -40,6 +40,7 @@ Most wearable tech devices have features to record the sporting activities you d
 
 #### CI PP4s for examples/inspirations on structure
 
+CI Hello Django, I think therefore I blog - video tutorials
 Kim Bergstroem - https://github.com/KimBergstroem/PP4/tree/main
 Christian Goran - https://github.com/christiangoran/dome-restaurant-repo/tree/main
 

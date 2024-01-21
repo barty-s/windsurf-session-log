@@ -68,7 +68,7 @@ class CreateSession(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView)
     template_name = "create_session.html"
     model = Session
     form_class = SessionForm
-    success_message = "Your session has been logged"
+    success_message = "Your session has been logged!"
     success_url = reverse_lazy("my_sessions")
 
     def form_valid(self, form):
@@ -87,7 +87,7 @@ class UpdateSession(
     model = Session
     template_name = "update_session.html"
     form_class = SessionForm
-    success_message = "Session updated successfully"
+    success_message = "Your session has been updated successfully!"
     success_url = reverse_lazy("my_sessions")
 
     def test_func(self):
@@ -98,12 +98,14 @@ class UpdateSession(
         return self.request.user == session.author
 
 
-class DeleteSession(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
+class DeleteSession(
+    LoginRequiredMixin, SuccessMessageMixin, UserPassesTestMixin, generic.DeleteView):
     """
     View to delete a session
     """
     model = Session
     template_name = "delete_session.html"
+    success_message = "Your session has been deleted!"
     success_url = reverse_lazy("my_sessions")
 
     def test_func(self):
