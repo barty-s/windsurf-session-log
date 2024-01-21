@@ -2,27 +2,25 @@
 
 {% block content %}
 <section>
-    <div class="container py-5 h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="container py-2 h-100" style="max-width: 700px;">
+        <div class="row">
             <div class="col-8 col-md-8 col-lg-8 mx-auto" style="max-width: 500px;">
-                <div class="card bg-clr-dom-light shadow-sm" style="border-radius: 1rem;">
-                    <div class="card-body p-5 text-center">
-                        <div class="mb-md-2 mt-md-4 pb-5">
-
-                            <h3 class="fw-bold mb-4 text-uppercase"> Wait... </h3>
-                            <p class="mb-5">Are you sure you want to DELETE<strong>
-                                    {{session.title }}</strong> ?</p>
-                                <!-- Post delete form -->
-                            <form method="post">
-                                {% csrf_token %} <!-- Security token from django against attackers -->
-                                {{ message }}
-                                <button class="btn btn-danger right px-3 py-1 rounded-3" type="submit"> <i
-                                        class="fas fa-trash-alt"></i> Delete</button>
-                            </form>
-                            <a class="btn btn-primary px-3 py-1 rounded-3 mt-4" href="{% url 'my_sessions' %}">Cancel</a>
-                        </div>
-                    </div>
-                </div>
+                <h3 class="mb-4 mt-5 text-uppercase text-center"> Wait... </h3>
+                <p class="mb-5 text-center delete">Are you sure you want to delete<strong> {{session.title|upper }}</strong>?</p>
+            </div>   
+        </div>
+        <div class="row">
+            <div class="col d-flex justify-content-center"> 
+                <form method="post">
+                    {% csrf_token %}
+                    {{ message }}
+                    <button class="btn btn-danger px-3 py-1 rounded-3" type="submit"> <i class="fas fa-trash-alt"></i> Delete</button>  
+                    </form> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col d-flex justify-content-center">  
+                <a class="btn btn-sign-up px-3 py-1 rounded-3 mt-3" href="{% url 'my_sessions' %}">Cancel</a>    
             </div>
         </div>
     </div>
