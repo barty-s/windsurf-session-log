@@ -47,6 +47,7 @@ Cloudinary
 
 - ### Fixed Bugs
 - On clicking the 'create session'/'update session'/'delete session' buttons in quick succession, multiple sessions were logged, updated and tried to be deleted. Put block on buttons once they've been clicked.
+- Delete Success Message wasn't displaying - found tutorial on how to create a Delete Message mixin
 
 - ### Supported Screens and Browsers
 
@@ -65,6 +66,7 @@ Cloudinary
 - https://stackoverflow.com/questions/4941974/django-how-to-set-datefield-to-only-accept-today-future-dates
 - https://stackoverflow.com/questions/61031491/can-i-limit-the-dates-possibilities-using-django-widget-dateinput-ex-between-2
 - https://stackoverflow.com/questions/24822509/success-message-in-deleteview-not-shown
+- https://stackoverflow.com/questions/66482049/get-deleted-object-in-django-deleteview - Delete Success Message
 
 #### CI PP4s for examples/inspirations on structure
 

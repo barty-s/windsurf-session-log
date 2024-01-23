@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
 from django.views import generic, View
+from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.utils.text import slugify
@@ -61,14 +62,13 @@ class SessionDetail(View):
         )
    
 
-class CreateSession(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
+class CreateSession(LoginRequiredMixin, generic.CreateView):
     """
     View for creating a new blog post
     """
     template_name = "create_session.html"
     model = Session
     form_class = SessionForm
-    success_message = "Your session has been logged!"
     success_url = reverse_lazy("my_sessions")
 
     def form_valid(self, form):
@@ -76,6 +76,12 @@ class CreateSession(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView)
         Custom logic to handle form validation when creating a new blog post
         """
         form.instance.author_id = self.request.user.pk
+
+        messages.success(
+            self.request,
+            'Your session has been logged!'
+        )
+
         return super(CreateSession, self).form_valid(form)
 
 
@@ -98,8 +104,25 @@ class UpdateSession(
         return self.request.user == session.author
 
 
+class SuccessDeleteMessageMixin:
+    """
+    Mixing for custom delete message
+    """
+    success_message = ''
+
+    def delete(self, *args, **kwargs):
+        response = super().delete(*args, **kwargs)
+        success_message = self.get_success_message()
+        if success_message:
+            messages.success(self.request, success_message)
+        return response
+
+    def get_success_message(self):
+        return self.success_message
+
+
 class DeleteSession(
-    LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
+    LoginRequiredMixin, UserPassesTestMixin, SuccessDeleteMessageMixin, generic.DeleteView):
     """
     View to delete a session
     """
@@ -114,6 +137,9 @@ class DeleteSession(
         session = self.get_object()
         return self.request.user == session.author
 
+    def get_success_message(self):
+        title = self.object.title
+        return f'{title.upper()} has been deleted successfully!'
 
 def handler403(request, exception=None):
     """
