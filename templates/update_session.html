@@ -11,7 +11,7 @@
           {% csrf_token %}
           {{ form.as_p }}
           <div class="text-center">
-            <button type="submit" class="btn btn-success mt-3 mb-3">Update Session</button>
+            <button onClick="this.disabled=true; this.form.submit();" type="submit" class="btn btn-success mt-3 mb-3">Update Session</button>
           </div>
         </form>
       </div>

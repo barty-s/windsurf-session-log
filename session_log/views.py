@@ -106,7 +106,7 @@ class UpdateSession(
 
 class SuccessDeleteMessageMixin:
     """
-    Mixing for custom delete message
+    Mixin for custom delete message
     """
     success_message = ''
 
@@ -140,6 +140,7 @@ class DeleteSession(
     def get_success_message(self):
         title = self.object.title
         return f'{title.upper()} has been deleted successfully!'
+    
 
 def handler403(request, exception=None):
     """

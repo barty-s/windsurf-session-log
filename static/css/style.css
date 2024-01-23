@@ -104,13 +104,10 @@ p .sign-in-link {
   color: #4b7a6e;
 }
 
-.helptext a,
-.helptext a:visited {
-  color: #014759;
-}
-
 /* Styling for My Sessions page */
-td .session-link {
+td .session-link,
+span .session-link,
+.current {
   color: #4b7a6e;
 }
 
