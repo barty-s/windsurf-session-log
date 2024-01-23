@@ -97,7 +97,10 @@
       </div>
     </nav>
 
-    <div class="container-message">
+   
+
+    <main class="flex-shrink-0">
+      <div class="container-message">
       <div class="row">
         <div class="col-md-8 offset-md-2 mt-3">
           {% for message in messages%}
@@ -119,7 +122,6 @@
       </div>
     </div>
 
-    <main class="flex-shrink-0">
       {% block content %}
       <!-- Content Goes here -->
       {% endblock content %}
@@ -177,7 +179,7 @@
         let messages = document.getElementById("msg");
         let alert = new bootstrap.Alert(messages);
         alert.close();
-      }, 1750);
+      }, 1900);
     </script>
   </body>
 </html>

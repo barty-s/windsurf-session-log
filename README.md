@@ -68,7 +68,7 @@ Cloudinary
 - https://stackoverflow.com/questions/24822509/success-message-in-deleteview-not-shown
 - https://stackoverflow.com/questions/66482049/get-deleted-object-in-django-deleteview - Delete Success Message
 
-#### CI PP4s for examples/inspirations on structure
+#### CI PP4s for examples/inspiration on structure
 
 CI Hello Django, I think therefore I blog - video tutorials
 Kim Bergstroem - https://github.com/KimBergstroem/PP4/tree/main
@@ -76,6 +76,6 @@ Christian Goran - https://github.com/christiangoran/dome-restaurant-repo/tree/ma
 
 #### Media
 
-- https://unsplash.com/ - for open-source images
+- https://unsplash.com/ - for open-source images Photo by <a href="https://unsplash.com/@darice?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Darice de Cuba</a> on <a href="https://unsplash.com/photos/a-person-holding-a-kite-on-a-beach-nbjA7vuoUVw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 - ERD - made with LucidCharts
 - Wireframes - made with Figma
