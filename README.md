@@ -9,7 +9,7 @@ Most wearable tech devices have features to record various sporting activities -
 As a user, I want to be able to create a profile and log in and out.
 As a user, I want to be able to create, read, update and delete training sessions from my log.
 
-As admin, I want to be able to delete users from the database using the superuser access, if required.
+As admin, I want to be able to delete users or sessions from the database using the superuser access, if required.
 
 ## Features
 
@@ -26,6 +26,10 @@ Sign out page - sign out button
 
 ## Typography and Color Scheme
 
+Google Fonts:
+Raleway for logo and headline
+Oxygen for all other text
+
 ## Wireframes
 
 ## Technology
@@ -41,9 +45,6 @@ Cloudinary
 
 - ### Code Validation
 - ### Test Cases (user story based with screenshots)
-- ### Remaining Issues
-
-  Success Message on Session Delete: I chose to use the older version of Django to be able to follow along with the CI tutorials. The success message feature is not available with this older version on the delete view. Therefore, no success message is shown when the user chooses to delete a session from their log.
 
 - ### Fixed Bugs
 - On clicking the 'create session'/'update session'/'delete session' buttons in quick succession, multiple sessions were logged, updated and tried to be deleted. Put block on buttons once they've been clicked.
@@ -67,6 +68,7 @@ Cloudinary
 - https://stackoverflow.com/questions/61031491/can-i-limit-the-dates-possibilities-using-django-widget-dateinput-ex-between-2
 - https://stackoverflow.com/questions/24822509/success-message-in-deleteview-not-shown
 - https://stackoverflow.com/questions/66482049/get-deleted-object-in-django-deleteview - Delete Success Message
+- https://codepen.io/bramus/pen/rLovLY - for title styling text-stroke
 
 #### CI PP4s for examples/inspiration on structure
 
