@@ -99,13 +99,12 @@ class UpdateSession(
 
 
 class DeleteSession(
-    LoginRequiredMixin, SuccessMessageMixin, UserPassesTestMixin, generic.DeleteView):
+    LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
     """
     View to delete a session
     """
     model = Session
     template_name = "delete_session.html"
-    success_message = "Your session has been deleted!"
     success_url = reverse_lazy("my_sessions")
 
     def test_func(self):
