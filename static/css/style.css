@@ -3,12 +3,17 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: "Oxygen", sans-serif;
+}
+
+.brand {
+  font-family: "Raleway", sans-serif;
 }
 
 .hero-image {
   background-image: url("https://res.cloudinary.com/dqulet5as/image/upload/v1706016533/windsurfer_2_e0iy2e.jpg");
   background-color: #fff;
-  height: 500px;
+  height: 600px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -69,8 +74,25 @@ h5 {
 }
 
 .btn-sign-up:hover {
+  color: #fff;
+  background-color: #388b96;
+}
+
+.headline {
   color: #014759;
-  background-color: #fff;
+  font-family: "Raleway", sans-serif;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  text-transform: uppercase;
+}
+
+@supports ((text-stroke: 2px #014759) or (-webkit-text-stroke: 2px #014759)) {
+  .headline {
+    color: transparent;
+    -webkit-text-stroke: 1px #014759;
+    text-stroke: 1px #014759;
+    text-shadow: none;
+  }
 }
 
 /* Styling for sign up/in pages */

@@ -1,4 +1,6 @@
-{% load static %} {% load active_link_tags %}
+{% load static %} 
+
+{% load active_link_tags %}
 
 <!DOCTYPE html>
 <html>
@@ -6,12 +8,10 @@
     <title>Windsurfer - Training Session Log</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Raleway:wght@200;300;400;500&display=swap"
       rel="stylesheet"
     />
     <link
@@ -97,30 +97,28 @@
       </div>
     </nav>
 
-   
-
     <main class="flex-shrink-0">
       <div class="container-message">
-      <div class="row">
-        <div class="col-md-8 offset-md-2 mt-3">
-          {% for message in messages%}
-          <div
-            class="alert {{ message.tags }} alert-dismissible fade show"
-            id="msg"
-            role="alert"
-          >
-            {{ message | safe }}
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="alert"
-              aria-label="Close"
-            ></button>
+        <div class="row">
+          <div class="col-md-8 offset-md-2 mt-3">
+            {% for message in messages%}
+            <div
+              class="alert {{ message.tags }} alert-dismissible fade show"
+              id="msg"
+              role="alert"
+            >
+              {{ message | safe }}
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="alert"
+                aria-label="Close"
+              ></button>
+            </div>
+            {% endfor %}
           </div>
-          {% endfor %}
         </div>
       </div>
-    </div>
 
       {% block content %}
       <!-- Content Goes here -->
