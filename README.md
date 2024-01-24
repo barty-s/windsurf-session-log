@@ -84,8 +84,35 @@ Fields: Title, Created On (date fiels), Date of Training (when the training sess
 
 ## Deployment
 
-- ### via Gitpod
-- ### via GitHub Pages
+### Fork the repository on GitHub
+
+- On the Windsurfer GitHub Repository page, click "Fork" in the top right of the page. A forked version of the project will appear.
+
+- Next Clone the forked repository by clicking the green "<> Code" button. Copy the URL and load it into your preferred IDE to set up the local environment and connect it with the GitHub repo.
+
+#### Deploy on Heroku
+
+- When the forked repo of the projec is read to be deployed, create a Pipfile.
+- In the terminal enter the command "pip3 freeze > requirements.txt". A file with all the requirements for the app will be created.
+
+##### Setting up Heroku
+
+- Navigate to the Heroku website (https://www.heroku.com/)
+- Login to Heroku and click on "Create App"
+- Click "New" and "Create a new app"
+- Choose a name and select your location
+- Navigate to the Resources tab
+- From the Resources list select "Heroku Postgres"
+- Navigate to the "Deploy" tab
+- Click on "Connect to Github" and search for your repository
+- Navigate to the Settings tab
+- Reveal Config Vars and add your Cloudinary and Database URL (from Heroku-Postgres) and Secret key.
+
+#### Deploy on Heroku
+
+- Navigate to the Deploy tab.
+- Choose the main branch for deploying and enable automatic deployment
+- Select manual deploy to build the App for the first time and check your build log for any issues
 
 ## Credits
 
