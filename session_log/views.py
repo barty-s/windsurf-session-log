@@ -64,7 +64,7 @@ class SessionDetail(View):
 
 class CreateSession(LoginRequiredMixin, generic.CreateView):
     """
-    View for creating a new blog post
+    View for logging a new training session
     """
     template_name = "create_session.html"
     model = Session
@@ -73,7 +73,7 @@ class CreateSession(LoginRequiredMixin, generic.CreateView):
 
     def form_valid(self, form):
         """
-        Custom logic to handle form validation when creating a new blog post
+        Custom logic to handle form validation
         """
         form.instance.author_id = self.request.user.pk
 
@@ -98,47 +98,34 @@ class UpdateSession(
 
     def test_func(self):
         """
-        Check if the current user is the author of the post being updated
+        Check if the current user is the author of the session being updated
         """
         session = self.get_object()
         return self.request.user == session.author
 
 
-class SuccessDeleteMessageMixin:
-    """
-    Mixin for custom delete message
-    """
-    success_message = ''
-
-    def delete(self, *args, **kwargs):
-        response = super().delete(*args, **kwargs)
-        success_message = self.get_success_message()
-        if success_message:
-            messages.success(self.request, success_message)
-        return response
-
-    def get_success_message(self):
-        return self.success_message
-
-
-class DeleteSession(SuccessDeleteMessageMixin, 
-    LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
+class DeleteSession(SuccessMessageMixin, LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
     """
     View to delete a session
     """
     model = Session
     template_name = "delete_session.html"
     success_url = reverse_lazy("my_sessions")
+    success_message = "Your session has been deleted successfully!"
 
     def test_func(self):
         """
-        Check if the current user is the author of the post being deleted
+        Check if the current user is the author of the session being deleted
         """
         session = self.get_object()
         return self.request.user == session.author
 
-    def get_success_message(self):
-        return f'{self.object} has been deleted successfully!'
+    def delete(self, request, *args, **kwargs):
+        """
+        Success message displayed after the session has been deleted
+        """
+        messages.success(self.request, self.success_message)
+        return super().delete(request, *args, **kwargs)
 
 
 def handler403(request, exception=None):
