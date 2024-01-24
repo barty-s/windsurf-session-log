@@ -69,6 +69,7 @@ Cloudinary
 - https://stackoverflow.com/questions/24822509/success-message-in-deleteview-not-shown
 - https://stackoverflow.com/questions/66482049/get-deleted-object-in-django-deleteview - Delete Success Message
 - https://codepen.io/bramus/pen/rLovLY - for title styling text-stroke
+- https://www.codeproject.com/Questions/5311757/Disable-the-submit-button-after-click-while-waitin - for disable button onclick code
 
 #### CI PP4s for examples/inspiration on structure
 

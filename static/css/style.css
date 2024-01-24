@@ -25,8 +25,15 @@ footer {
   color: #fff;
 }
 
-a,
-a:visited {
+.helptext a,
+.helptext a:visited {
+  color: #014759;
+}
+
+nav a,
+nav a:visited,
+footer a,
+footer a:visited {
   color: #fff;
 }
 
@@ -96,7 +103,8 @@ h5 {
 }
 
 /* Styling for sign up/in pages */
-p .sign-in-link {
+p .sign-in-link,
+p .helptext {
   color: #014759;
 }
 
