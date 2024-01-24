@@ -121,8 +121,8 @@ class SuccessDeleteMessageMixin:
         return self.success_message
 
 
-class DeleteSession(
-    LoginRequiredMixin, UserPassesTestMixin, SuccessDeleteMessageMixin, generic.DeleteView):
+class DeleteSession(SuccessDeleteMessageMixin, 
+    LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
     """
     View to delete a session
     """
@@ -138,9 +138,8 @@ class DeleteSession(
         return self.request.user == session.author
 
     def get_success_message(self):
-        title = self.object.title
-        return f'{title.upper()} has been deleted successfully!'
-    
+        return f'{self.object} has been deleted successfully!'
+
 
 def handler403(request, exception=None):
     """
