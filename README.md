@@ -139,3 +139,4 @@ Christian Goran - https://github.com/christiangoran/dome-restaurant-repo/tree/ma
 - ERD - made with LucidCharts
 - Wireframes - made with Figma
 - Coolers - for color palette
+- favicon.io - for site favicon
