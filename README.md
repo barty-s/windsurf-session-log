@@ -48,12 +48,28 @@ Fields: Title, Created On (date fiels), Date of Training (when the training sess
 
 ## Technology
 
-Django - allauth,
-Python
-HTML
-CSS
-JavaScript
-Cloudinary
+#### Languages
+
+- Python
+- HTML
+- CSS
+- JavaScript
+
+#### Frameworks
+
+- Django and Django libraries: allauth, active link, autoslug, crispy forms, summernote
+- Bootstrap - for responsive styling
+
+#### Database
+
+- ElephantSQL - a PostgreSQL database as a service
+
+#### Other
+
+- Cloudinary - for image storage
+- Heroku - to deploy the site
+- Git - version control
+- GitHub - to host the project repo. Also used GitHub's Agile Project Board feature to plan the development of the project.
 
 ## Testing
 
