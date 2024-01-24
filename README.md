@@ -78,13 +78,13 @@ Fields: Title, Created On (date fiels), Date of Training (when the training sess
 
 - ### Fixed Bugs
 - On clicking the 'create session'/'update session'/'delete session' buttons in quick succession, multiple sessions were logged, updated and tried to be deleted. Put block on buttons once they've been clicked.
-- Delete Success Message wasn't displaying - found tutorial on how to create a Delete Message mixin - not working again
+- Delete Success Message wasn't displaying - found tutorial on how to create a Delete Message
 
 - ### Supported Screens and Browsers
 
 ## Deployment
 
-### Fork the repository on GitHub
+#### Fork the repository on GitHub
 
 - On the Windsurfer GitHub Repository page, click "Fork" in the top right of the page. A forked version of the project will appear.
 
@@ -123,8 +123,7 @@ Fields: Title, Created On (date fiels), Date of Training (when the training sess
 - https://docs.djangoproject.com/en/5.0/topics/class-based-views/generic-display/
 - https://stackoverflow.com/questions/4941974/django-how-to-set-datefield-to-only-accept-today-future-dates
 - https://stackoverflow.com/questions/61031491/can-i-limit-the-dates-possibilities-using-django-widget-dateinput-ex-between-2
-- https://stackoverflow.com/questions/24822509/success-message-in-deleteview-not-shown
-- https://stackoverflow.com/questions/66482049/get-deleted-object-in-django-deleteview - Delete Success Message
+- https://stackoverflow.com/questions/24822509/success-message-in-deleteview-not-shown - Delete Success Message
 - https://codepen.io/bramus/pen/rLovLY - for title styling text-stroke
 - https://www.codeproject.com/Questions/5311757/Disable-the-submit-button-after-click-while-waitin - for disable button onclick code
 

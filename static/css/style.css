@@ -119,6 +119,17 @@ span .session-link,
   color: #4b7a6e;
 }
 
+.btn-create {
+  background-color: #4b7a6e;
+  color: #fff;
+  border: 2px solid #4b7a6e;
+}
+
+.btn-create:hover {
+  color: #4b7a6e;
+  background-color: #fff;
+}
+
 /* Styling for Session Detail page */
 .session-detail {
   border: 2px solid #014759;

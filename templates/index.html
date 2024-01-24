@@ -1,12 +1,11 @@
 {% extends "base.html" %}
-<!-- site home page - user sees before sign up/sign in  -->
+
 {% block content %}
-<!-- Header-->
+
 <header class="py-5 hero-image">
   <div class="container px-5 pb-5">
     <div class="row gx-5 align-items-center">
       <div class="col-xxl-5">
-        <!-- Header text content-->
         <div class="text-center text-xxl-start">
           <h1 class="display-3 fw-bolder mb-5">
             <span class="d-inline headline">Keep track of your training sessions</span>
@@ -16,7 +15,7 @@
           >
             <a
               class="btn btn-sign-up rounded-pill btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder"
-              href="{% url 'account_signup' %}"
+              href="{% url 'account_login' %}"
               >Log a Session</a
             >
           </div>
