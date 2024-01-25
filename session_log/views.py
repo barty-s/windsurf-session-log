@@ -34,7 +34,7 @@ class SessionList(generic.ListView):
         """
         Retrieve the signed in user's logged sessions
         """
-        return Session.objects.filter(author=self.request.user)  
+        return Session.objects.filter(author=self.request.user)
 
 
 class SessionDetail(View):
@@ -42,6 +42,9 @@ class SessionDetail(View):
     Render the session details after the user clicks on one from the list
     """
     def get(self, request, slug, *args, **kwargs):
+        """
+        Gets the details of a particular session
+        """
         queryset = Session.objects
         session = get_object_or_404(queryset, slug=slug)
 
@@ -52,9 +55,11 @@ class SessionDetail(View):
                 "session": session,
             },
         )
-    
+
     def session(self, request, slug, *args, **kwargs):
-
+        """
+        Displays the details of the session
+        """
         queryset = Session.objects
         session = get_object_or_404(queryset, slug=slug)
 
@@ -65,7 +70,7 @@ class SessionDetail(View):
                 "session": session,
             },
         )
-   
+
 
 class CreateSession(LoginRequiredMixin, generic.CreateView):
     """
@@ -109,7 +114,8 @@ class UpdateSession(
         return self.request.user == session.author
 
 
-class DeleteSession(SuccessMessageMixin, LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
+class DeleteSession(SuccessMessageMixin, LoginRequiredMixin,
+                    UserPassesTestMixin, generic.DeleteView):
     """
     View to delete a session
     """
