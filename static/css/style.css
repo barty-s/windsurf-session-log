@@ -83,6 +83,7 @@ h5 {
 .btn-sign-up:hover {
   color: #fff;
   background-color: #388b96;
+  transition: all 200ms ease-in-out;
 }
 
 .headline {
@@ -97,7 +98,6 @@ h5 {
   .headline {
     color: transparent;
     -webkit-text-stroke: 1px #014759;
-    text-stroke: 1px #014759;
     text-shadow: none;
   }
 }
@@ -128,6 +128,7 @@ span .session-link,
 .btn-create:hover {
   color: #4b7a6e;
   background-color: #fff;
+  transition: all 200ms ease-in-out;
 }
 
 /* Styling for Session Detail page */

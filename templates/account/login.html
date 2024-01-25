@@ -1,31 +1,45 @@
-{% extends "base.html" %}
+{% extends "base.html" %} 
 
-{% load i18n %}
-{% load account socialaccount %}
+{% load i18n %} 
 
-{% block head_title %}{% trans "Sign In" %}{% endblock %}
+{% load account socialaccount %} 
+
+{% block head_title %}{% trans "Sign In" %}{% endblock %} 
 
 {% block content %}
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
-            <h2 class="text-center welcome mb-4">Welcome back to Windsurfer </h2>
-            <h3 class="text-center welcome mb-4">{% trans "Sign In" %}</h3>
+  <div class="row">
+    <div class="col-md-8 mt-3 offset-md-2">
+      <h2 class="text-center welcome mb-4">Welcome back to Windsurfer</h2>
+      <h3 class="text-center welcome mb-4">{% trans "Sign In" %}</h3>
 
-            <p>To log a training session, please sign in below.</p>
-            <p>If you have not created an account yet, then <a class="sign-in-link" href="{{ signup_url }}"><strong>sign up</strong></a>
-                first.</p>
-        </div>
+      <p>To log a training session, please sign in below.</p>
+      <p>
+        If you have not created an account yet, then
+        <a
+          class="sign-in-link"
+          href="{{ signup_url }}"
+          title="Link to Sign Up page"
+          ><strong>sign up</strong></a
+        >
+        first.
+      </p>
     </div>
-    <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
-            <form class="login" method="POST" action="{% url 'account_login' %}">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button onClick="this.disabled=true; this.form.submit();" class="btn btn-sign-up right" type="submit">{% trans "Sign In" %}</button>
-            </form>
-        </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 mt-3 offset-md-2">
+      <form class="login" method="POST" action="{% url 'account_login' %}">
+        {% csrf_token %} {{ form.as_p }}
+        <button
+          onClick="this.disabled=true; this.form.submit();"
+          class="btn btn-sign-up right"
+          type="submit"
+        >
+          {% trans "Sign In" %}
+        </button>
+      </form>
     </div>
+  </div>
 </div>
 {% endblock %}

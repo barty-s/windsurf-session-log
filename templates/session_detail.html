@@ -38,15 +38,15 @@
     </div>
     <div class="row">
         <div class="col">
-            <a href="{% url 'update_session' session.slug  %}" class="btn btn-primary">Edit</a>
+            <a href="{% url 'update_session' session.slug  %}" class="btn btn-primary" title="Link to Edit Page">Edit</a>
         </div>
         <div class="col">
-            <a href="{% url 'delete_session' session.slug %}" class="btn btn-danger">Delete</a>
+            <a href="{% url 'delete_session' session.slug %}" class="btn btn-danger" title="Link to Delete Page">Delete</a>
         </div>
     </div>
     <div class="row mt-3">
          <div class="col">
-            <a href="{% url 'my_sessions' %}" class="btn btn-dark mb-3">Back</a>
+            <a href="{% url 'my_sessions' %}" class="btn btn-dark mb-3" title="Link to My Sessions">Back</a>
         </div>
     </div>
 </div>

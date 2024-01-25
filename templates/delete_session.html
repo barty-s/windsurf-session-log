@@ -1,27 +1,41 @@
-{% extends "base.html" %}
+{% extends "base.html" %} 
 
 {% block content %}
 <section>
-    <div class="container py-2 h-100" style="max-width: 700px;">
-        <div class="row">
-            <div class="col-8 col-md-8 col-lg-8 mx-auto" style="max-width: 500px;">
-                <h3 class="mb-4 mt-5 text-uppercase text-center"> Wait... </h3>
-                <p class="mb-5 text-center delete">Are you sure you want to delete<strong> {{session.title|upper }}</strong>?</p>
-            </div>   
-        </div>
-        <div class="row">
-            <div class="col d-flex justify-content-center"> 
-                <form method="post">
-                    {% csrf_token %}
-                    <button onClick="this.disabled=true; this.form.submit();" class="btn btn-danger px-3 py-1 rounded-3" type="submit"> <i class="fas fa-trash-alt"></i> Delete</button>  
-                    </form> 
-            </div>
-        </div>
-        <div class="row">
-            <div class="col d-flex justify-content-center">  
-                <a class="btn btn-sign-up px-3 py-1 rounded-3 mt-3" href="{% url 'my_sessions' %}">Cancel</a>    
-            </div>
-        </div>
+  <div class="container py-2 h-100" style="max-width: 700px">
+    <div class="row">
+      <div class="col-8 col-md-8 col-lg-8 mx-auto" style="max-width: 500px">
+        <h3 class="mb-4 mt-5 text-uppercase text-center">Wait...</h3>
+        <p class="mb-5 text-center delete">
+          Are you sure you want to delete<strong>
+            {{session.title|upper }}</strong
+          >?
+        </p>
+      </div>
     </div>
+    <div class="row">
+      <div class="col d-flex justify-content-center">
+        <form method="post">
+          {% csrf_token %}
+          <button
+            onClick="this.disabled=true; this.form.submit();"
+            class="btn btn-danger px-3 py-1 rounded-3"
+            type="submit"
+          >
+            <i class="fas fa-trash-alt"></i> Delete
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col d-flex justify-content-center">
+        <a
+          class="btn btn-sign-up px-3 py-1 rounded-3 mt-3"
+          href="{% url 'my_sessions' %}"
+          >Cancel</a
+        >
+      </div>
+    </div>
+  </div>
 </section>
 {% endblock %}
