@@ -15,6 +15,11 @@ def index(request):
     """
     return render(request, "index.html")
 
+def about(request):
+    """
+    Render the about.html template
+    """
+    return render(request, "about.html")
 
 class SessionList(generic.ListView):
     """
