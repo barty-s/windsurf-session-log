@@ -1,33 +1,51 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} 
 
-<header class="py-5 hero-image">
-  <div class="container px-5 pb-5">
-    <div class="row gx-5 align-items-center">
-      <div class="col-xxl-5">
-        <div class="text-center text-xxl-start">
-          <h1 class="display-3 fw-bolder mb-4">
-            <span class="d-inline headline">Welcome to Windsurfer</span>
-          </h1>
-          <div
-            class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3 about-div"
-          >
-            <p class="about-text p-2">
-              Log your training sessions so that you can keep track of your
-              progress. <br />Include details about the wind conditions, how you
-              felt on the water during your training session and what you were
-              working on. <br />You can inlcude comments from your coach or what
-              you want to work on in your next session in the details box too.
+{% block content %}
+
+<div class="container-fluid overflow-auto">
+  <div class="text-center text-xxl-start">
+    <h1 class="display-3 fw-bolder mt-3 mb-3">
+      <span class="d-inline about-welcome">Welcome to Windsurfer</span>
+    </h1>
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-6">
+          <img
+            src="https://res.cloudinary.com/dqulet5as/image/upload/v1706201782/windsurfers_2_coz8ks.jpg"
+            class="img-fluid rounded card-img"
+            alt="windsurfers"
+          />
+        </div>
+        <div class="col-md-6">
+          <div class="card-body">
+            <p class="card-text">
+              📝 Log your training sessions to keep track of your progress.
+              📝<br />
+              Include details about the wind conditions 💨, how you felt on the
+              water during your training session and what you were working on
+              💪.<br />You can include comments from your coach or what you want
+              to work on in your next session in the details box too.
               <br />There's a limit of one log per specified date so if you had
               multiple training sessions on one day, include them all in one
-              log. <br />There is a time-on-the-water limit of 6
+              log. 📆<br />There is a time-on-the-water limit of 6
               hours...remember not to over do it, rest is an important part of
-              training too! <br />We hope you enjoy this tool and find it useful
-              in your windsurfing training journey!
+              training too! 💆‍♀️<br /><br />We hope you enjoy this tool and find
+              it useful in your windsurfing training journey!
             </p>
           </div>
         </div>
       </div>
     </div>
   </div>
-</header>
+  <div
+    class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3"
+  >
+    <a
+      class="btn btn-sign-up rounded-pill btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder"
+      href="{% url 'account_signup' %}"
+      title="Link to Log In"
+      >Let's Get Started</a
+    >
+  </div>
+</div>
 {%endblock%}

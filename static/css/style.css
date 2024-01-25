@@ -41,10 +41,6 @@ footer a:visited {
   font-size: 27px;
 }
 
-footer {
-  margin-top: auto;
-}
-
 .fab {
   transition: all 0.2s ease-in-out;
 }
@@ -53,7 +49,7 @@ footer {
   transform: scale(1.1);
 }
 
-main {
+footer {
   position: relative;
 }
 
@@ -63,7 +59,7 @@ main {
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 600px;
+  width: 100%;
 }
 
 /* Styling for index.html */
@@ -103,16 +99,23 @@ h5 {
 }
 
 /* Styling for about page */
-.about-div {
-  background-color: #ffffff;
-  opacity: 0.5;
-  border-radius: 4px;
+.about-welcome {
+  font-family: "Raleway", sans-serif;
 }
 
-.about-div p {
-  font-weight: bold;
-  color: #000;
-  line-height: 2;
+.card {
+  border: transparent;
+}
+
+.card-img {
+  max-width: 100%;
+  height: 30vw;
+  object-fit: cover;
+}
+
+.card-text {
+  line-height: 200%;
+  font-size: 18px;
 }
 
 /* Styling for sign up/in pages */
@@ -153,4 +156,10 @@ span .session-link,
 /* Styling for Delete Session Page */
 .delete {
   font-size: 30px;
+}
+
+@media (max-width: 600px) {
+  .card-img {
+    display: none;
+  }
 }
