@@ -57,7 +57,7 @@ class SessionDetail(View):
             request,
             "session_detail.html",
             {
-                "post": session,
+                "session": session,
             },
         )
    

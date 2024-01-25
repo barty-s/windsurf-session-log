@@ -16,7 +16,7 @@ class Session(models.Model):
     """
     title = models.CharField(max_length=100, unique=False, null=False, blank=False)
     created_on = models.DateTimeField(auto_now_add=True)
-    date = models.DateField()
+    date = models.DateField(unique=True)
     slug = AutoSlugField(populate_from='date')
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="session_logs")
     updated_on = models.DateTimeField(auto_now=True)
