@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
+from django.core.exceptions import ValidationError
 from django.utils.text import slugify
 from autoslug import AutoSlugField
 
@@ -10,13 +11,22 @@ TIME_LOGGED_CHOICES = ((1, "1"), (2, "2"), (3, "3"), (4, "4"), (5, "5"), (6, "6"
 WIND_CHOICES = (("very light", "very light"), ("light", "light"), ("moderate", "moderate"), 
                 ("strong", "strong"), ("very strong", "very strong"), ("dangerous", "dangerous"))
 
+
+def validate_date(date):
+    """
+    Check of the date is in the future
+    """
+    if date > timezone.now().date():
+        raise ValidationError("Date cannot be in the future")
+
+
 class Session(models.Model):
     """
     Database model for a training session
     """
     title = models.CharField(max_length=100, unique=False, null=False, blank=False)
     created_on = models.DateTimeField(auto_now_add=True)
-    date = models.DateField(unique=True)
+    date = models.DateField(unique=True, validators=[validate_date])
     slug = AutoSlugField(populate_from='date')
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="session_logs")
     updated_on = models.DateTimeField(auto_now=True)
@@ -24,7 +34,6 @@ class Session(models.Model):
     time_logged = models.IntegerField(choices=TIME_LOGGED_CHOICES, default=1)
     wind_conditions = models.CharField(choices=WIND_CHOICES, default="light", max_length=15)
     rating = models.IntegerField(choices=RATING_CHOICES, default=1)
-    
 
     class Meta:
         """
@@ -45,7 +54,6 @@ class Session(models.Model):
 
         super().save(*args, **kwargs)
 
-    
     def __str__(self):
         """
         Returns a string representation of an object

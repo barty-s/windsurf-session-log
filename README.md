@@ -129,6 +129,7 @@ Fields: Title, Created On (date fiels), Date of Training (a unique field for whe
 - https://stackoverflow.com/questions/24822509/success-message-in-deleteview-not-shown - Delete Success Message
 - https://codepen.io/bramus/pen/rLovLY - for title styling text-stroke
 - https://www.codeproject.com/Questions/5311757/Disable-the-submit-button-after-click-while-waitin - for disable button onclick code
+- https://stackoverflow.com/questions/50002600/django-models-datefield-prevent-past - for validator to prevent date being set in the future
 
 #### CI PP4s for examples/inspiration on structure
 
