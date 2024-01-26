@@ -50,7 +50,8 @@ footer a:visited {
 }
 
 footer {
-  position: relative;
+  margin-top: auto;
+  /* position: relative; */
 }
 
 .container-message {
