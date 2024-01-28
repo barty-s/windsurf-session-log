@@ -2,7 +2,7 @@
 
 ## The Purpose of the Project
 
-Most wearable tech devices have features to record various sporting activities - running, cycling, yoga etc. However, there is no feature to record windsurfing training sessions. This app can be used by windsurfers to log their training sessions which will allow them to track their progress on the water.
+Most wearable tech devices have features to record various sporting activities - running, cycling, yoga etc. However, there is no feature to record watersports sessions, apart from swimming. This app is designed to be used by windsurfers to log their training sessions which will allow them to track their progress on the water.
 
 ## User Stories
 
@@ -10,7 +10,7 @@ As a user, I want to be able to create a profile and log in and out.
 As a user, I want to be able to create, read, update and delete training sessions from my log.
 As a user, I want to be able to learn more about the app.
 
-As admin, I want to be able to delete users or sessions from the database using the superuser access, if required.
+As admin, I want to be able to delete users or sessions from the database using the superuser access.
 
 ## Features
 
@@ -100,7 +100,7 @@ Fields: Title, Created On (date fiels), Date of Training (a unique field for whe
 
 ##### Setting up Heroku
 
-- Navigate to the Heroku website (https://www.heroku.com/)
+- Navigate to the [Heroku](https://www.heroku.com/) website
 - Login to Heroku and click on "Create App"
 - Click "New" and "Create a new app"
 - Choose a name and select your location
@@ -121,26 +121,26 @@ Fields: Title, Created On (date fiels), Date of Training (a unique field for whe
 
 #### For Roadblock Solutions and Explanations
 
-- https://stackoverflow.com/questions/62532910/add-a-date-or-a-number-at-the-end-of-a-slug
-- https://docs.djangoproject.com/en/5.0/topics/pagination/
-- https://docs.djangoproject.com/en/5.0/topics/class-based-views/generic-display/
-- https://stackoverflow.com/questions/4941974/django-how-to-set-datefield-to-only-accept-today-future-dates
-- https://stackoverflow.com/questions/61031491/can-i-limit-the-dates-possibilities-using-django-widget-dateinput-ex-between-2
-- https://stackoverflow.com/questions/24822509/success-message-in-deleteview-not-shown - Delete Success Message
-- https://codepen.io/bramus/pen/rLovLY - for title styling text-stroke
-- https://www.codeproject.com/Questions/5311757/Disable-the-submit-button-after-click-while-waitin - for disable button onclick code
-- https://stackoverflow.com/questions/50002600/django-models-datefield-prevent-past - for validator to prevent date being set in the future
+- [Add date to slug](https://stackoverflow.com/questions/62532910/add-a-date-or-a-number-at-the-end-of-a-slug)
+- [Pagination](https://docs.djangoproject.com/en/5.0/topics/pagination/)
+- [Generic display](https://docs.djangoproject.com/en/5.0/topics/class-based-views/generic-display/)
+- [Datefield - only past dates](https://stackoverflow.com/questions/4941974/django-how-to-set-datefield-to-only-accept-today-future-dates)
+- [Future date validator](https://stackoverflow.com/questions/50002600/django-models-datefield-prevent-past)
+- [Limit dates with django widget](https://stackoverflow.com/questions/61031491/can-i-limit-the-dates-possibilities-using-django-widget-dateinput-ex-between-2)
+- [Delete success message](https://stackoverflow.com/questions/24822509/success-message-in-deleteview-not-shown)
+- [Text-stroke styling](https://codepen.io/bramus/pen/rLovLY)
+- [Disable submit button onclick](https://www.codeproject.com/Questions/5311757/Disable-the-submit-button-after-click-while-waitin)
 
-#### CI PP4s for examples/inspiration on structure
+#### CI Walk-through projects and other PP4s for examples/inspiration on structure
 
 CI Hello Django, I think therefore I blog - video tutorials
-Kim Bergstroem - https://github.com/KimBergstroem/PP4/tree/main
-Christian Goran - https://github.com/christiangoran/dome-restaurant-repo/tree/main
+Kim Bergstroem - [PP4](https://github.com/KimBergstroem/PP4/tree/main)
+Christian Goran - [Dome Restaurant](https://github.com/christiangoran/dome-restaurant-repo/tree/main)
 
 #### Media
 
-- https://unsplash.com/ - for open-source images Photo by <a href="https://unsplash.com/@darice?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Darice de Cuba</a> on <a href="https://unsplash.com/photos/a-person-holding-a-kite-on-a-beach-nbjA7vuoUVw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> Photo by <a href="https://unsplash.com/@jannerboy62?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Nick Fewings</a> on <a href="https://unsplash.com/photos/woman-sailing-surfboard-9_4dlShbVek?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-- ERD - made with LucidCharts
-- Wireframes - made with Figma
-- Coolers - for color palette
-- favicon.io - for site favicon
+- [Unsplash](https://unsplash.com) - for open-source images Photo by [Darice de Cuba](https://unsplash.com/@darice?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) and [Nick Fewings](https://unsplash.com/@jannerboy62?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+- [LucidCharts](https://www.lucidchart.com) for the ERD
+- [Figma](https://www.figma.com/) for the wireframes
+- [Coolers](https://www.coolers.co) for the color palette
+- [Favicon](https://favicon.io/) to generate the app's favicon
