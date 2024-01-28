@@ -19,17 +19,67 @@ Most wearable tech devices have features to record various sporting activities -
 
 ## Features
 
-Landing page - sign up button
-About page - info about the app's purpose
-Sign up page - sign up form
-My Sessions page - list of sessions logged by the user
-Log a Session page - session log form
-Session detail page - user can access the details of a selected session
-Edit Session page - edit session form
-Delete Session page - user can to erase a selected session from their log
-Sign out page - sign out button
+- Nav bar - for non-authenticated users and for authenticated users
+  The app displays a nav-bar across all pages of the site. Prior to signing in, the user can see links to the home page, the about page, the sign in page and the sign up page.
+
+<img src="docs/features/nav-1.png">
+
+After signing in, the user will see a link to the My Sessions which is a list of their logged sessions, and a link to sign out.
+
+<img src="docs/features/nav-2.png">
+
+- Log a session button - the user can see a button inviting them to log a session. The user will be redirected to sign in, if they haven't already done so. Otherwise they will be directed to their list of sessions.
+
+<img src="docs/features/index.png">
+
+- Footer - The app displays the same footer across all pages of the site. The user can see links to social media sites and the developers GitHub and LinkedIn profiles.
+
+<img src="docs/features/footer.png">
+
+- Description of the app and link to sign up - the user can learn about how the app functions and then navigate to the sign up form.
+
+<img src="docs/features/about.png">
+
+- Sign up form - The user can fill in their personal details to create a profile on the app.
+
+<img src="docs/features/sign-up.png">
+
+- Sign in form - The user can fill in their username and password and be signed into their profile.
+
+<img src="docs/features/sign-in.png">
+
+- Sessions list - The user can view their logged sessions list and click a button to log another session. A maximum of 5 sessions will be logged per page.
+
+<img src="docs/features/my-sessions1.png">
+
+- Create session form - The user can fill in a form with all the details of their training session including what they did, how the wind was and how they would rate their time on the water.
+
+<img src="docs/features/create.png">
+
+- Session detail - The user can click the session they want to view and the see the details they've logged.
+
+<img src="docs/features/my-sessions2.png">
+<img src="docs/features/read.png">
+
+- Edit Session form - The user can easily update any section of the session's details.
+
+<img src="docs/features/update.png">
+
+- Delete session confirmation button - The user can either confirm they want to delete a session or cancel the deletion process.
+
+<img src="docs/features/delete.png">
+
+- Sign out button - The uer can confirm that they want to be signed out of the profile.
+
+<img src="docs/features/sign-out.png">
 
 ## Future Features
+
+- Total Hours Tally - I would like to have a tally of all the training hours logged by the user displayed on their personal My Sessions page. This would further add to the purpose of the app and benefit the user in their windsurfing training journey.
+
+- A map of locations - I would like to add a page to the site with a Google map of locations where there are decent windsurfing conditions.
+
+- A location suggestion form - I would also like to add an input feature where an app user can send a location suggestion to the app owner to review and then add to the map of locations. This would make the app a community-led site and further encourage windsurfing training sessions.
 
 ## Typography and Color Scheme
 
