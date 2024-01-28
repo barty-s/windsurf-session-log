@@ -6,11 +6,16 @@ Most wearable tech devices have features to record various sporting activities -
 
 ## User Stories
 
-As a user, I want to be able to create a profile, and log in and out.
-As a user, I want to be able to create, read, update and delete training sessions from my log.
-As a user, I want to be able to learn more about the app.
-
-As admin, I want to be able to delete users or sessions from the database using the superuser access.
+- Home page: As a visiting user, I want be able to see a navigation bar with links to the various pages of the site. And I want to be directed to the sign in page quickly and easily.
+- About page: As a visiting user, I want to learn more about the app and it's purpose. And then be redirected to the sign up page quickly and easily.
+- Sign Up page: As a visiting user, I want to be able to fill in a sign up form quickly and easily.
+- Sign In page: As a visiting user, I want to be able to sign into the app quickly and easily.
+- My Sessions page: As a visiting user, I want to see a list of all the sessions I have logged so far.
+- Create Session page: As a visiting user, I want to fill in a form with all the details about my training session.
+- Session Detail page: As a visiting user, I want to be able to see the details I have logged about a particular training session.
+- Edit Session page: As a visiting user, I want to be able to fill in a form that will update any or all elements of a particular training session.
+- Delete Session page: As a visiting user, I want to able to confirm that I want to delete the selected training session.
+- Log Out page: As a visiting user, I want to be able to log out of my profile and return to the home page.
 
 ## Features
 
