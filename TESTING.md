@@ -23,10 +23,23 @@ The pages were tested with https://validator.w3.org/nu/ - using the "address" fe
 
 The app was tested with https://jigsaw.w3.org/css-validator.
 
-| Tested         | Result    | View Result                                                                                             | Pass |
-| -------------- | --------- | ------------------------------------------------------------------------------------------------------- | ---- |
-| CSS file       | No errors | <details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-css.png"> </details> | ✔    |
-| Entire webpage | No errors |                                                                                                         | ✔    |
+| Tested         | Result    | View Result                                                                                                 | Pass |
+| -------------- | --------- | ----------------------------------------------------------------------------------------------------------- | ---- |
+| CSS file       | No errors | <details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-css.png"> </details>     | ✔    |
+| Entire webpage | No errors | <details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-css-app.png"> </details> | ✔    |
+
+### Python - PEP8
+
+The app was tested with https://pep8ci.herokuapp.com/
+
+| Tested                 | Result    | View Result                                                                                                             | Pass |
+| ---------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------- | ---- |
+| windsurfer/settings.py | No errors | <details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-windsurfer-settings.png"> </details> | ✔    |
+| windsurfer/urls.py     | No errors | <details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-windsurfer-urls.png"> </details>     | ✔    |
+| session_log/models.py  | No errors | <details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-session-log-models.png"> </details>  | ✔    |
+| session_log/views.py   | No errors | <details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-session-log-views.png"> </details>   | ✔    |
+| session_log/forms.py   | No errors | <details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-session-log-forms.png"> </details>   | ✔    |
+| session_log/urls.py    | No errors | <details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-session-log-urls.png"> </details>    | ✔    |
 
 - ### Test Cases (user story based with screenshots)
 

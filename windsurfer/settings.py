@@ -32,7 +32,7 @@ DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['windsurfer-2612fb2bbc12.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['windsurfer-2612fb2bbc12.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -61,7 +61,7 @@ SITE_ID = 1
 LOGIN_REDIRECT_URL = 'my_sessions'
 LOGOUT_REDIRECT_URL = '/'
 
-CRISPY_TEMPLATE_PACK ='bootstrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
@@ -116,7 +116,7 @@ WSGI_APPLICATION = 'windsurfer.wsgi.application'
 # }
 
 DATABASES = {
-     'default': dj_database_url.parse(os.environ.get("DATABASE_URL")) 
+     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
 
@@ -125,16 +125,20 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+                'UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+                'MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+                'CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+                'NumericPasswordValidator',
     },
 ]
 

@@ -27,10 +27,10 @@ class SessionForm(forms.ModelForm):
                 attrs={"class": "form-control"}
             ),
             "details": forms.Textarea(
-                attrs={'class': 'form-control', 'rows': 5}
+                attrs={"class": "form-control", "rows": 5}
             ),
             "date": forms.DateInput(
-                attrs={"class": "form-control", "type": "date", "max":today}
+                attrs={"class": "form-control", "type": "date", "max": today}
             )
         }
 

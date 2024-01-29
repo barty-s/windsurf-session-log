@@ -15,11 +15,13 @@ def index(request):
     """
     return render(request, "index.html")
 
+
 def about(request):
     """
     Render the about.html template
     """
     return render(request, "about.html")
+
 
 class SessionList(generic.ListView):
     """
@@ -95,8 +97,8 @@ class CreateSession(LoginRequiredMixin, generic.CreateView):
         return super(CreateSession, self).form_valid(form)
 
 
-class UpdateSession(
-    LoginRequiredMixin, SuccessMessageMixin, UserPassesTestMixin, generic.UpdateView):
+class UpdateSession(LoginRequiredMixin, SuccessMessageMixin,
+                    UserPassesTestMixin, generic.UpdateView):
     """
     View for updating a logged session
     """
