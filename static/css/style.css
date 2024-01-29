@@ -91,7 +91,7 @@ h5 {
   text-transform: uppercase;
 }
 
-@supports ((text-stroke: 2px #014759) or (-webkit-text-stroke: 2px #014759)) {
+@supports (-webkit-text-stroke: 2px #014759) {
   .headline {
     color: transparent;
     -webkit-text-stroke: 1px #014759;

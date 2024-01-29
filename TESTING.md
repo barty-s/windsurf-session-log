@@ -19,6 +19,15 @@ The pages were tested with https://validator.w3.org/nu/ - using the "address" fe
 | update_session.html |                                                Using code from "Source Code" option on right clicking the page - no errors found.                                                 | <details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-update.png"> </details>     | ✔      |
 | delete_session.html |                                                Using code from "Source Code" option on right clicking the page - no errors found.                                                 | <details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-delete.png"> </details>     | ✔      |
 
+### CSS
+
+The app was tested with https://jigsaw.w3.org/css-validator.
+
+| Tested         | Result    | View Result                                                                                             | Pass |
+| -------------- | --------- | ------------------------------------------------------------------------------------------------------- | ---- |
+| CSS file       | No errors | <details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-css.png"> </details> | ✔    |
+| Entire webpage | No errors |                                                                                                         | ✔    |
+
 - ### Test Cases (user story based with screenshots)
 
 - ### Fixed Bugs
