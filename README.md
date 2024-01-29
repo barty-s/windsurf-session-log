@@ -8,14 +8,14 @@ Most wearable tech devices have features to record various sporting activities -
 
 - Home page: As a visiting user, I want be able to see a navigation bar with links to the various pages of the site. And I want to be directed to the sign in page quickly and easily.
 - About page: As a visiting user, I want to learn more about the app and it's purpose. And then be redirected to the sign up page quickly and easily.
-- Sign Up page: As a visiting user, I want to be able to fill in a sign up form quickly and easily.
-- Sign In page: As a visiting user, I want to be able to sign into the app quickly and easily.
-- My Sessions page: As a visiting user, I want to see a list of all the sessions I have logged so far.
-- Create Session page: As a visiting user, I want to fill in a form with all the details about my training session.
+- Sign Up page: As a visiting user, I want to be able to fill in a sign up form quickly and easily, and receive confirmation that I have been successfully signed up.
+- Sign In page: As a visiting user, I want to be able to sign into the app quickly and easily, and receive confirmation that I have been successfully signed in.
+- My Sessions page: As a visiting user, I want to see a list of all the sessions I have logged so far and be able to log a new session quickly and easily.
+- Create Session page: As a visiting user, I want to be able to fill in a form with all the details about my training session. I want to receive confirmation that my session has been logged successfully.
 - Session Detail page: As a visiting user, I want to be able to see the details I have logged about a particular training session.
-- Edit Session page: As a visiting user, I want to be able to fill in a form that will update any or all elements of a particular training session.
-- Delete Session page: As a visiting user, I want to able to confirm that I want to delete the selected training session.
-- Log Out page: As a visiting user, I want to be able to log out of my profile and return to the home page.
+- Edit Session page: As a visiting user, I want to be able to fill in a form that will update any or all elements of a particular training session. And receive confirmation that my session has been updated successfully.
+- Delete Session page: As a visiting user, I want to able to confirm that I want to delete the selected training session. And I want to receive confirmation that the session has been deleted successfully.
+- Log Out page: As a visiting user, I want to be able to log out of my profile and return to the home page. And receive confirmation that I have been signed out successfully.
 
 ## Features
 
@@ -159,14 +159,7 @@ Fields:
 
 ## Testing
 
-- ### Code Validation
-- ### Test Cases (user story based with screenshots)
-
-- ### Fixed Bugs
-- On clicking the 'create session'/'update session'/'delete session' buttons in quick succession, multiple sessions were logged, updated and tried to be deleted. Put block on buttons once they've been clicked.
-- Delete Success Message wasn't displaying - found tutorial on how to create a Delete Message
-
-- ### Supported Screens and Browsers
+Follow this [link](TESTING.md) to the testing results page.
 
 ## Deployment
 
