@@ -41,6 +41,12 @@ The app was tested with https://pep8ci.herokuapp.com/
 | session_log/forms.py   | No errors | <details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-session-log-forms.png"> </details>   | ✔    |
 | session_log/urls.py    | No errors | <details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-session-log-urls.png"> </details>    | ✔    |
 
+## Accessibility
+
+### Wave
+
+The app was tested with https://wave.webaim.org/
+
 - ### Test Cases (user story based with screenshots)
 
 - ### Fixed Bugs
