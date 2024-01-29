@@ -45,12 +45,19 @@ The app was tested with https://pep8ci.herokuapp.com/
 
 ### Wave
 
-The app was tested with https://wave.webaim.org/
+The app was tested with https://wave.webaim.org/ - no errors or contrast warnings were detected.
 
-- ### Test Cases (user story based with screenshots)
+<details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-wave.png"> </details>
 
-- ### Fixed Bugs
+## Performance
+
+### Lighthouse
+
+## Test Cases (user story based with screenshots)
+
+## Fixed Bugs
+
 - On clicking the 'create session'/'update session'/'delete session' buttons in quick succession, multiple sessions were logged, updated and tried to be deleted. Put block on buttons once they've been clicked.
 - Delete Success Message wasn't displaying - found tutorial on how to create a Delete Message
 
-- ### Supported Screens and Browsers
+## Supported Screens and Browsers
