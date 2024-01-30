@@ -57,7 +57,7 @@ The app was tested with Google Chrome's Lighthouse tool to analyse performance. 
 
 | Tested              | Performance Score | View Result                                                                                                            |
 | ------------------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| index.html          | 94                | <details> <summary>View result</summary> <img src="docs/testing/code_validation/lighthouse-index.png> </details>       |
+| index.html          | 94                | <details> <summary>View result</summary> <img src="docs/testing/code_validation/lighthouse-index.png"> </details>      |
 | about.html          | 94                | <details> <summary>View result</summary> <img src="docs/testing/code_validation/lighthouse-about.png"> </details>      |
 | signup.hmtl         | 95                | <details> <summary>View result</summary> <img src="docs/testing/code_validation/lighthouse-signup.png"> </details>     |
 | login.html          | 93                | <details> <summary>View result</summary> <img src="docs/testing/code_validation/lighthouse-login.png"> </details>      |
