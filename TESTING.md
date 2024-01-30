@@ -1,4 +1,4 @@
-# Windsurfer - Windsurfing Training Log App - Testing
+# Windsurfer - Training Session Log App - Testing
 
 ## Code Validation
 
@@ -76,3 +76,18 @@ The app was tested with Google Chrome's Lighthouse tool to analyse performance. 
 - Delete Success Message wasn't displaying - found tutorial on how to create a Delete Message
 
 ## Supported Screens and Browsers
+
+- Using the Google Chrome Simulateur-Mobile extension, the app was tested on the following devices:
+
+  - Samsung Galaxy Fold
+  - Xiaomi 12
+  - iPhone X
+  - iPad Air 4 (showed issues with responsiveness of the main image on index.html)
+  - MacBook Air
+
+- The app was tested on the following browsers:
+
+  - Safari
+  - Chrome
+  - Firefox
+  - Edge

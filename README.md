@@ -19,6 +19,8 @@ Most wearable tech devices have features to record various sporting activities -
 - Delete Session page: As a visiting user, I want to able to confirm that I want to delete the selected training session. And I want to receive confirmation that the session has been deleted successfully.
 - Log Out page: As a visiting user, I want to be able to log out of my profile and return to the home page. And receive confirmation that I have been signed out successfully.
 
+- Django Admin access: As admin of the app, I want to be able to access the admin page and edit/delete a particular session and edit/delete a user and their logged sessions.
+
 ## Features
 
 - Nav bar - for non-authenticated users and for authenticated users
@@ -88,6 +90,8 @@ After signing in, the user will see a link to the My Sessions which is a list of
 - A map of locations - I would like to add a page to the site with a Google map of locations where there are decent windsurfing conditions.
 
 - A location suggestion form - I would also like to add an input feature where an app user can send a location suggestion to the app owner to review and then add to the map of locations. This would make the app a community-led site and further encourage windsurfing training sessions.
+
+- Change password feature - I would like to implement an option for the user to update or change their password if they have forgotten it. Currently there is a link that takes the user to a page informing them to contact the app's support team to change their password. A feature allowing the user to do this themselves would be more user friendly and in line with standard authentication features.
 
 ## Typography and Color Scheme
 
