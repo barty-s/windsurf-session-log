@@ -1,5 +1,7 @@
 # Windsurfer - Windsurfing Training Log App
 
+<img src="docs/erd-wireframes/amiresponsive.png">
+
 ## The Purpose of the Project
 
 Most wearable tech devices have features to record various sporting activities - running, cycling, yoga etc. However, there is no feature to record watersports sessions, apart from swimming. This app is designed to be used by windsurfers to log their training sessions which will allow them to track their progress on the water.
