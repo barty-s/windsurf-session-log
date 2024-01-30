@@ -200,6 +200,18 @@ Follow this [link](TESTING.md) to the testing results page.
 - Choose the main branch for deploying and enable automatic deployment
 - Select manual deploy to build the App for the first time and check your build log for any issues
 
+## Agile Process
+
+- The app was planned a developed following the Agile approach.
+- The GitHub Kanban project board feature was used to set up the various stages of the project development.
+  <img src="docs/features/github-kanban.png">
+- The project was split into several Epics, which were then split into User Stories with tasks.
+  <img src="docs/features/github-epics.png">
+  <img src="docs/features/github-user-stories.png">
+  <img src="docs/features/github-user-stories1.png">
+- The user stories were labelled following MoSCoW prioritization aiming to achieve a viable MVP.
+  <img src="docs/features/github-labels.png">
+
 ## Credits
 
 #### For Roadblock Solutions and Explanations
