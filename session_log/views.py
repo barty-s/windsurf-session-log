@@ -55,7 +55,7 @@ class SessionDetail(View):
             "session_detail.html",
             {
                 "session": session,
-            },
+            }, author=self.request.user
         )
 
     def session(self, request, slug, *args, **kwargs):
