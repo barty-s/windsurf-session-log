@@ -82,6 +82,7 @@ After signing in, the user will see a link to the My Sessions which is a list of
   <img src="docs/features/success2.png">
   <img src="docs/features/success3.png">
   <img src="docs/features/success4.png">
+  <img src="docs/features/success5.png">
 
 ## Future Features
 
