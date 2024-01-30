@@ -53,6 +53,21 @@ The app was tested with https://wave.webaim.org/ - no errors or contrast warning
 
 ### Lighthouse
 
+The app was tested with Google Chrome's Lighthouse tool to analyse performance. It was tested in incognito mode.
+
+| Tested              | Performance Score | View Result                                                                                                            |
+| ------------------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| index.html          | 94                | <details> <summary>View result</summary> <img src="docs/testing/code_validation/lighthouse-index.png> </details>       |
+| about.html          | 94                | <details> <summary>View result</summary> <img src="docs/testing/code_validation/lighthouse-about.png"> </details>      |
+| signup.hmtl         | 95                | <details> <summary>View result</summary> <img src="docs/testing/code_validation/lighthouse-signup.png"> </details>     |
+| login.html          | 93                | <details> <summary>View result</summary> <img src="docs/testing/code_validation/lighthouse-login.png"> </details>      |
+| logout.html         | 96                | <details> <summary>View result</summary> <img src="docs/testing/code_validation/lighthouse-logout.png"> </details>     |
+| create_session.html | 94                | <details> <summary>View result</summary> <img src="docs/testing/code_validation/lighthouse-create.png"> </details>     |
+| my_sessions.html    | 95                | <details> <summary>View result</summary> <img src="docs/testing/code_validation/lighthouse-mysessions.png"> </details> |
+| session_detail.html | 95                | <details> <summary>View result</summary> <img src="docs/testing/code_validation/lighthouse-read.png"> </details>       |
+| update_session.html | 94                | <details> <summary>View result</summary> <img src="docs/testing/code_validation/lighthouse-update.png"> </details>     |
+| delete_session.html | 92                | <details> <summary>View result</summary> <img src="docs/testing/code_validation/lighthouse-delete.png"> </details>     |
+
 ## Test Cases (user story based with screenshots)
 
 ## Fixed Bugs
