@@ -8,8 +8,13 @@
                 <div class="mb-md-2 mt-md-4 pb-5">
                     <h1>Error 500:</h1>
                     <h2>Internal Server Error</h2>
+                    {% if user.is_authenticated %}
                     <div>
                         <a class="btn btn-sign-up px-3 py-1 rounded-3 mt-4" href="{% url 'my_sessions' %}" title="Link to My Sessions">Go Back</a>
+                    </div>
+                    {% else %}
+                    <div>
+                        <a class="btn btn-sign-up px-3 py-1 rounded-3 mt-4" href="{% url 'index' %}" title="Link to Home">Go Back</a>
                     </div>
                 </div>
             </div>

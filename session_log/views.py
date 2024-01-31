@@ -74,13 +74,14 @@ class SessionDetail(View):
         )
 
 
-class CreateSession(LoginRequiredMixin, generic.CreateView):
+class CreateSession(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
     """
     View for logging a new training session
     """
     template_name = "create_session.html"
     model = Session
     form_class = SessionForm
+    success_message = "Your session has been logged successfully!"
     success_url = reverse_lazy("my_sessions")
 
     def form_valid(self, form):
@@ -89,10 +90,6 @@ class CreateSession(LoginRequiredMixin, generic.CreateView):
         """
         form.instance.author_id = self.request.user.pk
 
-        messages.success(
-            self.request,
-            'Your session has been logged!'
-        )
 
         return super(CreateSession, self).form_valid(form)
 
