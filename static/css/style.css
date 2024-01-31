@@ -13,7 +13,6 @@ body {
 .hero-image {
   background-image: url("https://res.cloudinary.com/dqulet5as/image/upload/v1706535974/windsurfer-_2_-_2__x6jifh.webp");
   background-color: #fff;
-  height: 850px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -51,7 +50,6 @@ footer a:visited {
 
 footer {
   margin-top: auto;
-  /* position: relative; */
 }
 
 .container-message {
