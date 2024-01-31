@@ -27,10 +27,10 @@ class Session(models.Model):
     """
     Database model for a training session
     """
-    title = models.CharField(max_length=100, unique=False,
+    date = models.DateField(validators=[validate_date])
+    title = models.CharField(max_length=100,
                              null=False, blank=False)
     created_on = models.DateTimeField(auto_now_add=True)
-    date = models.DateField(unique=True, validators=[validate_date])
     slug = AutoSlugField(populate_from='date')
     author = models.ForeignKey(User, on_delete=models.CASCADE,
                                related_name="session_logs")
