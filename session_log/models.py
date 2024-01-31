@@ -46,6 +46,7 @@ class Session(models.Model):
         Set the order of sessions by most recent session logged
         """
         ordering = ["-date"]
+        unique_together = ("author", "date")
 
     def save(self, *args, **kwargs):
         """

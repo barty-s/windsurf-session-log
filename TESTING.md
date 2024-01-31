@@ -95,6 +95,12 @@ The app was tested with Google Chrome's Lighthouse tool to analyse performance. 
 | Limit on date selection not working - the calander looked like future <br>dates were being blocked but they could be selected manually.                             | Added validate date method to models.py.        |     |
 | Authentication error on Session Detail view - one signed in user can <br>see another signed in user's Session Detail.                                               | Added filter method to SessionDetail get method |     |
 
+## Existing Bug
+
+| Existing Bugs                                                                                                                                                                                                                                                                                    | Soluion Needed                                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| The model had a unique parameter on the date field to try prevent the user from logging more than one session per date. <br>However, this prevented all other users from using that date.<br>A unique_together paramter was added to the model meta class. It works but it's a clumbsy solution. | Currently an Error 500 message is raised which redirects the user to the home page. <br>A smoother handling of the error is required. |     |
+
 ## Supported Screens and Browsers
 
 - Using the Google Chrome Simulateur-Mobile extension, the app was tested on the following devices:
