@@ -212,6 +212,9 @@ Follow this [link](TESTING.md) to the testing results page.
 - The user stories were labelled following MoSCoW prioritization aiming to achieve a viable MVP.
   <img src="docs/features/github-labels.png">
 
+- As the project is public on GitHub, it is open to other users to view and try to contribute to. I had an interesting incident when another GitHub user asked to be assigned to a User Story #9. I want to clarify that there were no contributors to the project apart from myself.
+  <img src="docs/erd-wireframes/github-user.png">
+
 ## Credits
 
 #### For Roadblock Solutions and Explanations
@@ -225,6 +228,7 @@ Follow this [link](TESTING.md) to the testing results page.
 - [Delete success message](https://stackoverflow.com/questions/24822509/success-message-in-deleteview-not-shown)
 - [Text-stroke styling](https://codepen.io/bramus/pen/rLovLY)
 - [Disable submit button onclick](https://www.codeproject.com/Questions/5311757/Disable-the-submit-button-after-click-while-waitin)
+- Many thanks to the CI tutors and my mentor, Rohit Sharma, for their advice and suggestions.
 
 #### CI Walk-through projects and other PP4s for examples/inspiration on structure
 
