@@ -130,7 +130,7 @@ Fields:
 
 - Title
 - Created On (date field)
-- Date of Training (a unique field for when the training session happened)
+- Date of Training
 - Slug
 - Author(foreign key linking to the User model)
 - Updated On (date field)
@@ -138,6 +138,11 @@ Fields:
 - Time Logged on the Water (maximum of 6 hours)
 - Session Rating (out of 5, to rate how the user felt on the water during the session)
 - Wind Conditions (user selects how they would describe the wind during their session)
+
+Meta:
+
+- Logged sessions ordered by most recent date
+- Unique_together for author and date
 
 ## Technology
 
