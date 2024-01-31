@@ -93,7 +93,7 @@ The app was tested with Google Chrome's Lighthouse tool to analyse performance. 
 | On clicking the 'create session'/'update session'/'delete session' buttons in quick succession, <br>multiple sessions were logged, updated and tried to be deleted. | Put block on buttons once they've been clicked. |     |
 | Delete Success Message wasn't displaying because there was no form_valid to attach to.                                                                              | Created success message mixin.                  |     |
 | Limit on date selection not working - the calander looked like future <br>dates were being blocked but they could be selected manually.                             | Added validate date method to models.py.        |     |
-| Authentication error on Session Detail view - one signed in user can <br>see another signed in user's Session Detail.                                               | Added parameter to session detail view.         |     |
+| Authentication error on Session Detail view - one signed in user can <br>see another signed in user's Session Detail.                                               | Added filter method to SessionDetail get method |     |
 
 ## Supported Screens and Browsers
 

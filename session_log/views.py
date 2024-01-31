@@ -47,7 +47,7 @@ class SessionDetail(View):
         """
         Gets the details of a particular session
         """
-        queryset = Session.objects
+        queryset = Session.objects.filter(author=self.request.user)
         session = get_object_or_404(queryset, slug=slug)
 
         return render(
