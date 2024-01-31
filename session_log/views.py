@@ -74,7 +74,8 @@ class SessionDetail(View):
         )
 
 
-class CreateSession(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
+class CreateSession(LoginRequiredMixin, 
+                    SuccessMessageMixin, generic.CreateView):
     """
     View for logging a new training session
     """
@@ -89,7 +90,6 @@ class CreateSession(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView)
         Custom logic to handle form validation
         """
         form.instance.author_id = self.request.user.pk
-
 
         return super(CreateSession, self).form_valid(form)
 
