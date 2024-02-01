@@ -33,4 +33,3 @@ class SessionForm(forms.ModelForm):
                 attrs={"class": "form-control", "type": "date", "max": today}
             )
         }
-

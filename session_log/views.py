@@ -74,7 +74,7 @@ class SessionDetail(View):
         )
 
 
-class CreateSession(LoginRequiredMixin, 
+class CreateSession(LoginRequiredMixin,
                     SuccessMessageMixin, generic.CreateView):
     """
     View for logging a new training session
