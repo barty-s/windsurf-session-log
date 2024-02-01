@@ -32,15 +32,15 @@ The app was tested with https://jigsaw.w3.org/css-validator.
 
 The app was tested with https://pep8ci.herokuapp.com/
 
-| Tested                 | Result    | View Result                                                                                                               | Pass |
-| ---------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------- | ---- |
-| windsurfer/settings.py | No errors | <details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-windsurfer-settings.png"> </details>   | ✔    |
-| windsurfer/urls.py     | No errors | <details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-windsurfer-urls.png"> </details>       | ✔    |
-| session_log/models.py  | No errors | <details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-session-log-models.png"> </details>    | ✔    |
-| session_log/views.py   | No errors | <details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-session-log-views.png"> </details>     | ✔    |
-| session_log/forms.py   | No errors | <details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-session-log-forms.png"> </details>     | ✔    |
-| session_log/urls.py    | No errors | <details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-session-log-urls.png"> </details>      | ✔    |
-| session_log/admin.py   | No errors | <details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-session-log-admin.png.png"> </details> | ✔    |
+| Tested                 | Result    | View Result                                                                                                             | Pass |
+| ---------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------- | ---- |
+| windsurfer/settings.py | No errors | <details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-windsurfer-settings.png"> </details> | ✔    |
+| windsurfer/urls.py     | No errors | <details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-windsurfer-urls.png"> </details>     | ✔    |
+| session_log/models.py  | No errors | <details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-session-log-models.png"> </details>  | ✔    |
+| session_log/views.py   | No errors | <details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-session-log-views.png"> </details>   | ✔    |
+| session_log/forms.py   | No errors | <details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-session-log-forms.png"> </details>   | ✔    |
+| session_log/urls.py    | No errors | <details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-session-log-urls.png"> </details>    | ✔    |
+| session_log/admin.py   | No errors | <details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-session-log-admin.png"> </details>   | ✔    |
 
 ### JavaScript
 

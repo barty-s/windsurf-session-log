@@ -7,7 +7,7 @@ from allauth.socialaccount.models import SocialAccount, SocialApp, SocialToken
 @admin.register(Session)
 class SessionAdmin(admin.ModelAdmin):
     list_display = ('author', 'title', 'date')
-    list_filter = ('author', 'title', 'date')
+    list_filter = ('author', 'date')
 
 
 # The following lines are added to remove the default django admin apps
