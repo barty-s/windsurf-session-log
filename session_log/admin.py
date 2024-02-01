@@ -6,6 +6,9 @@ from allauth.socialaccount.models import SocialAccount, SocialApp, SocialToken
 
 @admin.register(Session)
 class SessionAdmin(admin.ModelAdmin):
+    """
+    Class to customize Django admin display
+    """
     list_display = ('author', 'title', 'date')
     list_filter = ('author', 'date')
 
