@@ -9,7 +9,7 @@ Most wearable tech devices have features to record various sporting activities -
 ## User Stories
 
 - Home page: As a visiting user, I want be able to see a navigation bar with links to the various pages of the site. And I want to be directed to the sign in page quickly and easily.
-- About page: As a visiting user, I want to learn more about the app and it's purpose. And then be redirected to the sign up page quickly and easily.
+- About page: As a visiting user, I want to learn more about the app and its purpose. And then be redirected to the sign up page quickly and easily.
 - Sign Up page: As a visiting user, I want to be able to fill in a sign up form quickly and easily, and receive confirmation that I have been successfully signed up.
 - Sign In page: As a visiting user, I want to be able to sign into the app quickly and easily, and receive confirmation that I have been successfully signed in.
 - My Sessions page: As a visiting user, I want to see a list of all the sessions I have logged so far and be able to log a new session quickly and easily.
@@ -19,24 +19,24 @@ Most wearable tech devices have features to record various sporting activities -
 - Delete Session page: As a visiting user, I want to able to confirm that I want to delete the selected training session. And I want to receive confirmation that the session has been deleted successfully.
 - Log Out page: As a visiting user, I want to be able to log out of my profile and return to the home page. And receive confirmation that I have been signed out successfully.
 
-- Django Admin access: As admin of the app, I want to be able to access the admin page and edit/delete a particular session and edit/delete a user and their logged sessions.
+- Django Admin access: As admin of the app, I want to be able to access the admin page and edit/delete a particular session and/or edit/delete a user and all of their logged sessions.
 
 ## Features
 
-- Nav bar - for non-authenticated users and for authenticated users
+- Nav bar - for non-authenticated users and for authenticated users.<br>
   The app displays a nav-bar across all pages of the site. Prior to signing in, the user can see links to the home page, the about page, the sign in page and the sign up page.
 
 <img src="docs/features/nav-1.png">
 
-After signing in, the user will see a link to the My Sessions which is a list of their logged sessions, and a link to sign out.
+After signing in, the user will see a link to the My Sessions page which displays a list of their logged sessions, and a link to sign out.
 
 <img src="docs/features/nav-2.png">
 
-- Log a session button - the user can see a button inviting them to log a session. The user will be redirected to sign in, if they haven't already done so. Otherwise they will be directed to their list of sessions.
+- Log a session button - the user can see a button inviting them to log a session. The user will be redirected to sign in, if they haven't already done so. Otherwise they will be directed to their My Sessions page.
 
 <img src="docs/features/index.png">
 
-- Footer - The app displays the same footer across all pages of the site. The user can see links to social media sites and the developers GitHub and LinkedIn profiles.
+- Footer - The app displays the same footer across all pages of the site. The user can see links to social media sites and the developer's GitHub and LinkedIn profiles.
 
 <img src="docs/features/footer.png">
 
@@ -52,7 +52,7 @@ After signing in, the user will see a link to the My Sessions which is a list of
 
 <img src="docs/features/sign-in.png">
 
-- Sessions list - The user can view their logged sessions list and click a button to log another session. A maximum of 5 sessions will be logged per page.
+- Sessions list - The user can view their logged sessions list and click a button to log another session. A maximum of 5 logged sessions will be displayed per page.
 
 <img src="docs/features/my-sessions1.png">
 
@@ -88,17 +88,19 @@ After signing in, the user will see a link to the My Sessions which is a list of
 
 - Total Hours Tally - I would like to have a tally of all the training hours logged by the user displayed on their personal My Sessions page. This would further add to the purpose of the app and benefit the user in their windsurfing training journey.
 
+- Star rating - I would like the user to be able to see their session rating as stars rather than numbers. This would add to the UX/UI and create a positive user experience.
+
 - A map of locations - I would like to add a page to the site with a Google map of locations where there are decent windsurfing conditions.
 
-- A location suggestion form - I would also like to add an input feature where an app user can send a location suggestion to the app owner to review and then add to the map of locations. This would make the app a community-led site and further encourage windsurfing training sessions.
+- A location suggestion form - I would also like to add an input feature where an app user can send a location suggestion to the app owner to review and then add to the map of locations. This would make the app a community-led feature and further encourage windsurfing training sessions.
 
-- Change password feature - I would like to implement an option for the user to update or change their password if they have forgotten it. Currently there is a link that takes the user to a page informing them to contact the app's support team to change their password. A feature allowing the user to do this themselves would be more user friendly and in line with standard authentication features.
+- Change password feature - I would like to implement an option for the user to update or change their password if they have forgotten it. Currently there is a link that takes the user to a page informing them to contact the app's fictional support team to change their password. A feature allowing the user to do this themselves would be more user friendly and in line with standard authentication features.
 
 ## Typography and Color Scheme
 
 Google Fonts:
 
-- <img src="docs/erd-wireframes/font1.png"> For logo and headline
+- <img src="docs/erd-wireframes/font1.png"> For logo and headlines
 - <img src="docs/erd-wireframes/font2.png"> For all other text
 
 Colour palette generated by [Coolers](https://www.coolers.co), using colours from the hero image on the Home page.
@@ -183,7 +185,7 @@ Follow this [link](TESTING.md) to the testing results page.
 
 #### Deploy on Heroku
 
-- When the forked repo of the projec is read to be deployed, create a Pipfile.
+- When the forked repo of the project is ready to be deployed, create a Pipfile.
 - In the terminal enter the command "pip3 freeze > requirements.txt". A file with all the requirements for the app will be created.
 
 ##### Setting up Heroku
@@ -197,11 +199,11 @@ Follow this [link](TESTING.md) to the testing results page.
 - Navigate to the "Deploy" tab
 - Click on "Connect to Github" and search for your repository
 - Navigate to the Settings tab
-- Reveal Config Vars and add your Cloudinary and Database URL (from Heroku-Postgres) and Secret key.
+- Reveal Config Vars and add your Cloudinary and Database URL (from Heroku-Postgres) and Secret key
 
 #### Deploy on Heroku
 
-- Navigate to the Deploy tab.
+- Navigate to the Deploy tab
 - Choose the main branch for deploying and enable automatic deployment
 - Select manual deploy to build the App for the first time and check your build log for any issues
 
@@ -238,7 +240,7 @@ Follow this [link](TESTING.md) to the testing results page.
 
 #### CI Walk-through projects and other PP4s for examples/inspiration on structure
 
-- CI Hello Django, I think therefore I blog - video tutorials
+- CI Hello Django and I think therefore I blog - video tutorials
 - Kim Bergstroem - [PP4](https://github.com/KimBergstroem/PP4/tree/main)
 - Christian Goran - [Dome Restaurant](https://github.com/christiangoran/dome-restaurant-repo/tree/main)
 
