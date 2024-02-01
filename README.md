@@ -241,8 +241,8 @@ Follow this [link](TESTING.md) to the testing results page.
 #### CI Walk-through projects and other PP4s for examples/inspiration on structure
 
 - CI Hello Django and I think therefore I blog - video tutorials
-- Kim Bergstroem - [PP4](https://github.com/KimBergstroem/PP4/tree/main)
-- Christian Goran - [Dome Restaurant](https://github.com/christiangoran/dome-restaurant-repo/tree/main)
+- Kim Bergstroem - [PP4](https://github.com/KimBergstroem/PP4/tree/main) - for inspiration on blog-like features
+- Christian Goran - [Dome Restaurant](https://github.com/christiangoran/dome-restaurant-repo/tree/main) - for inspiration for My Sessions table display feature.
 
 #### Media
 
