@@ -41,6 +41,14 @@ The app was tested with https://pep8ci.herokuapp.com/
 | session_log/forms.py   | No errors | <details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-session-log-forms.png"> </details>   | ✔    |
 | session_log/urls.py    | No errors | <details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-session-log-urls.png"> </details>    | ✔    |
 
+### JavaScript
+
+There is very little JavaScript code in this project. It is stored in the static/js directory to adhere to best practices of separation of concerns. The form submit buttons contain a line of JavaScript to block the button "onClick".
+
+The code was tested with https://jshint.com/. No errors were found.
+
+<details> <summary>View result</summary> <img src="docs/testing/code_validation/cv-js.png"> <img src="docs/testing/code_validation/cv-js1.png"></details>
+
 ## Accessibility
 
 ### Wave
